@@ -3,7 +3,7 @@ import os
 import subprocess
 
 
-SCREEN_COMMAND = "xrandr -o {}"
+SCREEN_COMMAND = "xrandr --output eDP1 --output {}"
 SCREEN_FLIP = "inverted"
 SCREEN_DEFAULT = "normal"
 
@@ -26,6 +26,7 @@ def cli(component, flip):
 
     SCREEN = SCREEN_COMMAND.format(screen_addon)
     TOUCH = TOUCH_COMMAND.format(touch_addon)
+    TOUCH = "echo \"No touchscreen to handle.\""
 
     exit_code = 0
     if component in ['screen', 'all']:
