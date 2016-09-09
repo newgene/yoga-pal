@@ -3,7 +3,7 @@ import os
 import subprocess
 
 
-SCREEN_COMMAND = "xrandr --output eDP1 --output {}"
+SCREEN_COMMAND = "xrandr --output eDP1 --rotate {}"
 SCREEN_FLIP = "inverted"
 SCREEN_DEFAULT = "normal"
 
